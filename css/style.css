@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    /* Primary Colors */
+    --violet: hsl(257, 40%, 49%);
+    --soft-magneta: hsl(300, 69%, 71%);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    background: var(--violet) url('../images/bg-mobile.svg') no-repeat center top;
+    background-size: contain;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+button {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+}
+
+/* Huddle Landing Page Styles */
+.card__container {
+    width: 80%;
+    margin: 2rem auto;
+}
+.huddle__logo {
+    width: 130px;
+    margin-bottom: 4rem;
+}
+.huddle__wrapper {
+    display: grid;
+    gap: 3.5rem;
+}
+.huddle__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+.huddle__description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15.5px;
+    margin-bottom: 2rem;
+}
+.huddle__btn {
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    padding: .8rem 5rem;
+    border-radius: 24px;
+    color: var(--violet);
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 5px 8px 0 hsla(0, 0%, 15%, 0.45);
+}
+.huddle__socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.social__icon {
+    width: 30px;
+    height: 30px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.huddle__socials a {
+    color: inherit;
+}
+
+/* Media Queries - Large Screen Sizes */
+@media screen and (min-width: 768px) {
+    body {
+        background: var(--violet) url("../images/bg-desktop.svg") no-repeat center top;
+        text-align: left;
+        max-width: 1024px;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+    }
+    .card__container {
+        width: 90%;
+        margin: 5rem auto;
+        position: relative;
+    }
+    .huddle__wrapper {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3rem;
+    }
+    .huddle__logo {
+        inline-size: max-content;
+        margin-bottom: 7rem;
+    }
+    .huddle__title {
+        font-size: 1.45rem;
+    }
+    .huddle__description {
+        font-size: .95rem;
+    }
+    .huddle__socials {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        justify-content: flex-end;
+    }
+}
