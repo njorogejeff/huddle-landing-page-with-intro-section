@@ -69,7 +69,7 @@ a {
     font-family: 'Poppins', sans-serif;
     font-size: .8rem;
     margin-bottom: 4rem;
-    box-shadow: 0 5px 8px 0 hsla(0, 0%, 15%, 0.45);
+    box-shadow: 5px 5px 8px 0 hsla(0, 0%, 15%, 0.45);
 }
 .huddle__socials {
     width: 100%;
@@ -95,6 +95,7 @@ a {
 @media screen and (min-width: 768px) {
     body {
         background: var(--violet) url("../images/bg-desktop.svg") no-repeat center top;
+        background-size: cover;
         text-align: left;
         max-width: 1024px;
         height: 100vh;
@@ -103,16 +104,19 @@ a {
     }
     .card__container {
         width: 90%;
-        margin: 5rem auto;
+        margin: 3rem auto;
         position: relative;
     }
     .huddle__wrapper {
-        grid-template-columns: 1.5fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
         gap: 3rem;
     }
     .huddle__logo {
         inline-size: max-content;
-        margin-bottom: 7rem;
+        margin-bottom: 5rem;
+    }
+    .second__section {
+        margin-top: 2rem
     }
     .huddle__title {
         font-size: 1.45rem;
@@ -126,4 +130,50 @@ a {
         bottom: 0;
         justify-content: flex-end;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1920px;
+    }
+    .second__section {
+        margin-top: 3rem;
+        max-width: 550px;
+    }
+    .huddle__socials {
+        left: unset;
+        right: 0;
+    }
+    .second__section,
+    .huddle__socials {
+        margin-right: 2rem;
+    }
+    .huddle__title {
+        font-size: 2.7rem;
+    }
+    .huddle__description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    .huddle__btn {
+        font-size: 1rem;
+        padding: 1rem 4rem;
+        border-radius: 36px;
+    }
+    .huddle__socials .social__icon {
+        font-size: 1.2rem;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Active States */
+.huddle__btn:hover {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--soft-magneta);
+    cursor: pointer;
+}
+.social__icon:hover {
+    color: var(--soft-magneta);
+    border-color: var(--soft-magneta);
 }
